@@ -1,0 +1,11 @@
+(*		tests/TestArgParser.def		*)
+
+DEFINITION MODULE TestArgParser;
+
+FROM SYSTEM IMPORT ADDRESS;
+
+EXPORT QUALIFIED TestArgParser_Main;
+
+PROCEDURE TestArgParser_Main(argc: INTEGER; argv: ADDRESS);
+
+END TestArgParser.

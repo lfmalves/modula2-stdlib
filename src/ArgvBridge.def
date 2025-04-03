@@ -1,0 +1,14 @@
+(*    src/ArgvBridge.def    *)
+
+DEFINITION MODULE ArgvBridge;
+
+FROM SYSTEM IMPORT ADDRESS;
+
+CONST MaxLen = 255;
+
+TYPE
+  CStr = ARRAY [0..MaxLen] OF CHAR;
+
+PROCEDURE argvToString(src: ADDRESS; VAR dest: CStr; max: INTEGER);
+
+END ArgvBridge.

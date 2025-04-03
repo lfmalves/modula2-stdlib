@@ -1,11 +1,13 @@
+(*    src/ArgParser.def    *)
+
 DEFINITION MODULE ArgParser;
 
-FROM SYSTEM IMPORT ADDRESS;
-
 TYPE
-     String = ARRAY [0..255] OF CHAR;
+  String = ARRAY [0..255] OF CHAR;
 
-PROCEDURE InitArgParser (argc: INTEGER, argv: ADDRESS);
+PROCEDURE SetNumArgs(n: INTEGER);
+PROCEDURE SetArg(index: INTEGER; arg: String);
+
 PROCEDURE HasFlag(flag: String): BOOLEAN;
 PROCEDURE GetValue(key: String; VAR value: String): BOOLEAN;
 
